@@ -20,7 +20,6 @@ export const Settings = () => {
   const handleChangeExtraSkill = ({ label, value }: CheckboxEvent) =>
     setExtraSkills((prev) => ({ ...prev, [label]: value }));
   const handleChangeAllExtraSkills = ({ value }: CheckboxEvent) => {
-    console.log('value', value);
     toggleAllExtraSkills(value);
   };
 

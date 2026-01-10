@@ -1,5 +1,4 @@
 import type { Route } from './+types/home';
-import { Aside } from '~/components/aside/aside';
 import { useData } from '~/hooks/data';
 import { Main } from '~/components/main/main';
 import { Actions } from '~/components/actions/actions';
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <div className="mx-auto flex h-[594mm] w-[210mm] grow">
       <Actions />
-      <Aside />
       <Main />
     </div>
   );
