@@ -1,12 +1,11 @@
 import type { Route } from './+types/home';
-import { useData } from '~/hooks/data';
+import { data as resumeData } from '~/data/resume';
 import { Main } from '~/components/main/main';
 import { Actions } from '~/components/actions/actions';
 
 // eslint-disable-next-line no-empty-pattern
 export function meta({}: Route.MetaArgs) {
-  const { data } = useData();
-  const name = `CV ${data.personal.name}`;
+  const name = `CV ${resumeData.personal.name}`;
 
   return [{ title: name }, { name: 'description', content: name }];
 }
