@@ -5,7 +5,7 @@ import { Skills } from '~/components/main/skills';
 
 export const Main = () => {
   return (
-    <div className="relative flex flex-col gap-1 px-5 py-4">
+    <div className="relative flex flex-col gap-1 px-5 py-2">
       <Header />
       <Summary />
       <ExperienceList />
