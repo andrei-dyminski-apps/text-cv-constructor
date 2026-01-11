@@ -4,13 +4,15 @@ import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
 
-const base = process.env.BASE_PATH ?? '/';
+const basePath = process.env.BASE_PATH ?? '/';
+const base = basePath.endsWith('/') ? basePath : `${basePath}/`;
+const basename = base === '/' ? '/' : base.replace(/\/$/, '');
 
 export default defineConfig({
   base,
   plugins: [
     tailwindcss(),
-    reactRouter(),
+    reactRouter({ basename }),
     tsconfigPaths(),
     svgr({
       // svgr options: https://react-svgr.com/docs/options/
