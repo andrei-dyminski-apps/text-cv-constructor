@@ -27,7 +27,14 @@ export const data = {
       'Build tools': ['Webpack', 'Gulp', 'Grunt', 'Vite', 'Rollup'],
       'Style tools': ['Tailwind CSS', 'Sass', 'Less'],
       'Auto testing tools': ['Cypress', 'Jest', 'Vitest', 'Playwright'],
-      UIKit: ['Element Plus', 'Vuetify', 'Ant Design', 'Nuxt UI', 'Radix UI'],
+      UIKit: [
+        'Element Plus',
+        'Vuetify',
+        'PrimeVue',
+        'Nuxt UI',
+        'Ant Design',
+        'Radix UI',
+      ],
       Backend: [
         'Node.js',
         'Express.js',
