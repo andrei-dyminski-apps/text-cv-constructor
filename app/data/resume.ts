@@ -49,7 +49,14 @@ export const data = {
       'CI/CD': ['Docker', 'Vercel', 'GitHub Actions'],
       'Code Quality & Formatting': ['ESLint', 'Stylelint', 'Prettier'],
       CMS: ['1C-Bitrix', 'Strapi', 'Supabase', 'Directus', 'WordPress'],
-      Others: ['Axios', 'REST API', 'jQuery', 'Bootstrap', 'Day.js'],
+      Others: [
+        'Axios',
+        'REST API',
+        'jQuery',
+        'Bootstrap',
+        'Day.js',
+        'Recharts.js',
+      ],
     },
   },
   summary: `
