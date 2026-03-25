@@ -52,6 +52,8 @@ export const data = {
       Others: [
         'Axios',
         'REST API',
+        'WebSockets',
+        'Server-Sent Events',
         'jQuery',
         'Bootstrap',
         'Day.js',
