@@ -22,20 +22,24 @@ type DataContextType = {
   data: typeof data;
   coreSkills: Options;
   extraSkills: Options;
+  optionalAchievements: Options;
   selectedAllExtraSkills: boolean;
   toggleAllExtraSkills: (value: boolean) => void;
   setCoreSkills: Dispatch<SetStateAction<Options>>;
   setExtraSkills: Dispatch<SetStateAction<Options>>;
+  setOptionalAchievements: Dispatch<SetStateAction<Options>>;
 };
 
 export const DataContext = createContext<DataContextType>({
   data,
   coreSkills: {},
   extraSkills: {},
+  optionalAchievements: {},
   selectedAllExtraSkills: false,
   toggleAllExtraSkills: () => {},
   setCoreSkills: () => {},
   setExtraSkills: () => {},
+  setOptionalAchievements: () => {},
 });
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
@@ -56,6 +60,13 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         return acc;
       },
       {} as Record<string, boolean>
+    )
+  );
+  const [optionalAchievements, setOptionalAchievements] = useState<
+    Record<string, boolean>
+  >(() =>
+    Object.fromEntries(
+      data.optionalAchievements.map((achievement) => [achievement, false])
     )
   );
 
@@ -110,21 +121,35 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       ...item,
       responsibilities: filterByCoreSkills(item.responsibilities),
     }));
+    result.achievements = [
+      ...result.achievements,
+      ...result.optionalAchievements.filter(
+        (achievement) => optionalAchievements[achievement]
+      ),
+    ];
 
     return result;
-  }, [coreSkills, extraSkills]);
+  }, [coreSkills, extraSkills, optionalAchievements]);
 
   const value = useMemo(
     () => ({
       data: filteredData,
       coreSkills,
       extraSkills,
+      optionalAchievements,
       selectedAllExtraSkills,
       toggleAllExtraSkills,
       setCoreSkills,
       setExtraSkills,
+      setOptionalAchievements,
     }),
-    [filteredData, coreSkills, extraSkills, selectedAllExtraSkills]
+    [
+      filteredData,
+      coreSkills,
+      extraSkills,
+      optionalAchievements,
+      selectedAllExtraSkills,
+    ]
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

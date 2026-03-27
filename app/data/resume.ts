@@ -24,7 +24,7 @@ export const data = {
       ],
     },
     extra: {
-      'Build tools': ['Webpack', 'Gulp', 'Grunt', 'Vite', 'Rollup'],
+      'Build tools': ['Webpack', 'Vite', 'Rollup'],
       'Style tools': ['Tailwind CSS', 'Sass', 'Less'],
       'Auto testing tools': ['Cypress', 'Jest', 'Vitest', 'Playwright'],
       UIKit: [
@@ -58,6 +58,7 @@ export const data = {
         'Bootstrap',
         'Day.js',
         'Recharts.js',
+        'I18N Localization',
       ],
     },
   },
@@ -73,8 +74,11 @@ export const data = {
   `,
   achievements: [
     'Optimized performance, reducing page load speed by 30% and significantly boosting conversion rates.',
-    'Implemented testing systems using Jest, Vitest, and Cypress, achieving a 35% reduction in bugs and enhancing software reliability.',
-    'Developed and streamlined CI/CD processes using Vercel and GitHub Actions, cutting deployment time by 40%.',
+    'Implemented testing systems using Jest, Vitest, Cypress and Playwright, achieving a 35% reduction in bugs and enhancing software reliability.',
+    'Organized CI/CD processes using Vercel and GitHub Actions, cutting deployment time by 40%.',
+  ],
+  optionalAchievements: [
+    'Extensive experience using AI tools in everyday work, including integrating AI APIs into projects.',
   ],
   experience: [
     {

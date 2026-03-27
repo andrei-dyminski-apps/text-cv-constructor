@@ -11,6 +11,8 @@ export const Settings = () => {
     setCoreSkills,
     extraSkills,
     setExtraSkills,
+    optionalAchievements,
+    setOptionalAchievements,
     selectedAllExtraSkills,
     toggleAllExtraSkills,
   } = useData();
@@ -19,6 +21,8 @@ export const Settings = () => {
     setCoreSkills((prev) => ({ ...prev, [label]: value }));
   const handleChangeExtraSkill = ({ label, value }: CheckboxEvent) =>
     setExtraSkills((prev) => ({ ...prev, [label]: value }));
+  const handleChangeOptionalAchievement = ({ label, value }: CheckboxEvent) =>
+    setOptionalAchievements((prev) => ({ ...prev, [label]: value }));
   const handleChangeAllExtraSkills = ({ value }: CheckboxEvent) => {
     toggleAllExtraSkills(value);
   };
@@ -67,6 +71,20 @@ export const Settings = () => {
                     label={skill}
                     value={value}
                     onChange={handleChangeExtraSkill}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="text-lg font-bold">Optional achievements</div>
+            <ul className="flex flex-col gap-1">
+              {Object.entries(optionalAchievements).map(([item, value]) => (
+                <li key={item}>
+                  <Checkbox
+                    label={item}
+                    value={value}
+                    onChange={handleChangeOptionalAchievement}
                   />
                 </li>
               ))}
