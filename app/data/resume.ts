@@ -54,6 +54,8 @@ export const data = {
         'REST API',
         'WebSockets',
         'Server-Sent Events',
+        'Service Worker',
+        'PWA',
         'jQuery',
         'Bootstrap',
         'Day.js',
