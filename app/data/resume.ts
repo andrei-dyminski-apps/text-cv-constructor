@@ -26,7 +26,13 @@ export const data = {
     extra: {
       'Build tools': ['Webpack', 'Vite', 'Rollup'],
       'Style tools': ['Tailwind CSS', 'Sass', 'Less'],
-      'Auto testing tools': ['Cypress', 'Jest', 'Vitest', 'Playwright'],
+      'Auto testing tools': [
+        'Cypress',
+        'Jest',
+        'Vitest',
+        'Playwright',
+        'React Testing Library',
+      ],
       UIKit: [
         'Element Plus',
         'Vuetify',
@@ -52,6 +58,7 @@ export const data = {
       Others: [
         'Axios',
         'REST API',
+        'GraphQL',
         'WebSockets',
         'Server-Sent Events',
         'Service Worker',
