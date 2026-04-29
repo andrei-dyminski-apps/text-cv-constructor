@@ -72,7 +72,7 @@ export const data = {
     },
   },
   summary: `
-    I am a results-oriented Front-End Engineer with more than 8 years of experience in developing and optimizing high-performance web applications.
+    I am a results-oriented Front-End Engineer with 9 years of experience in developing and optimizing high-performance web applications.
     <div class="my-1.5"/>
     Passionate about continuous learning and professional growth, I am committed to exceeding expectations through excellence in development, communication, and collaboration. My ability to work effectively with teams ensures successful project completion on time and within budget.
     <div class="my-1.5"/>
