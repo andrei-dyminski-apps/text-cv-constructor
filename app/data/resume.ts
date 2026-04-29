@@ -40,6 +40,7 @@ export const data = {
         'Nuxt UI',
         'Ant Design',
         'Radix UI',
+        'Material UI (MUI)',
       ],
       Backend: [
         'Node.js',
