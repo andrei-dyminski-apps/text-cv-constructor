@@ -103,7 +103,6 @@ export const data = {
         'Designing and documenting REST APIs using Node.js, Express.js, Supabase, and Joi (validation/auth).',
         'Implementing unit tests with Jest, integration tests with Vitest, and end-to-end (E2E) tests using Cypress.',
         'Integrating and managing CMS solutions such as Supabase, Strapi, and Directus.',
-        'Optimized critical user flows, reducing page load time by ~25%.',
         'Implementing responsive, adaptive, and cross-browser-compatible layouts.',
       ],
     },
